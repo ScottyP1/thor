@@ -51,7 +51,7 @@ export default function Nav() {
                 </div>
                 <div className="hidden lg:flex lg:items-center lg:space-x-4">
                     <Link href='/contact'>
-                        <button className="rounded-lg bg-red-500 px-4 py-2">Get Quote</button> {/* For larger screens */}
+                        <button className="rounded-lg bg-red-600 px-2 py-2 w-[100px] hover:bg-red-700">Get Quote</button> {/* For larger screens */}
                     </Link>
                 </div>
                 <button className="lg:hidden text-white ml-auto" onClick={toggleSidebar}>
@@ -78,10 +78,6 @@ export default function Nav() {
                     <NavItem path={path} href="/about" text="About" closeSidebar={closeSidebar} />
                     <NavItem path={path} href="/services_" text="Services" closeSidebar={closeSidebar} />
                     <NavItem path={path} href="/contact" text="Contact" closeSidebar={closeSidebar} />
-                    <li className="lg:hidden text-white mt-2 text-xl">
-                        <Link href='/contact'>
-                            <button className="rounded-lg bg-red-500 px-4 py-2">Get Quote</button> {/* For larger screens */}
-                        </Link>                    </li>
                 </ul>
             </div>
         </div>
