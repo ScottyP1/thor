@@ -26,7 +26,6 @@ export default function Contact() {
                         </a>
                         {/* <MapBox /> */}
                     </div>
-
                 </div>
             </div>
         </main>

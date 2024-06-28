@@ -1,7 +1,5 @@
-import localFont from 'next/font/local';
 import React from 'react';
 
-const myFont = localFont({ src: '../fonts/Marker.ttf' });
 
 export default function Home() {
     return (

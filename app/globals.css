@@ -21,8 +21,22 @@ body {
   background-repeat: no-repeat;
 }
 
+.notFoundBG {
+  height: 100vh;
+  position: fixed;
+  background-color: #000000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-position: top;
+  background-image: url('../public/notFound.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+
 .textGradient {
-  font-size: 72px;
   background: -webkit-linear-gradient(#ff0000 50%, #000000);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -30,7 +44,6 @@ body {
 
 @media (max-width:760px) {
   .textGradient {
-    font-size: 32px;
     background: -webkit-linear-gradient(#ff0000 60%, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -45,6 +58,10 @@ body {
     background-image: url('../public/contactBGMobile.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  .notFoundBG {
+    background-image: url('../public/notFoundMobile.jpg');
   }
 }
 
