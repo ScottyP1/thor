@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
@@ -42,14 +42,19 @@ export default function Nav() {
                             <Image src={Logo} width={60} alt="logo" className="rounded-full xl:w-[100px]" />
                         </div>
                     </Link>
-                    <ul className="hidden lg:flex space-x-4 ml-12">
+                    <ul className="hidden lg:flex space-x-4 ml-12 mt-2">
                         <NavItem path={path} href="/" text="Home" closeSidebar={closeSidebar} />
                         <NavItem path={path} href="/about" text="About" closeSidebar={closeSidebar} />
                         <NavItem path={path} href="/services_" text="Services" closeSidebar={closeSidebar} />
                         <NavItem path={path} href="/contact" text="Contact" closeSidebar={closeSidebar} />
                     </ul>
                 </div>
-                <button className="lg:hidden text-white" onClick={toggleSidebar}>
+                <div className="hidden lg:flex lg:items-center lg:space-x-4">
+                    <Link href='/contact'>
+                        <button className="rounded-lg bg-red-500 px-4 py-2">Get Quote</button> {/* For larger screens */}
+                    </Link>
+                </div>
+                <button className="lg:hidden text-white ml-auto" onClick={toggleSidebar}>
                     <div className="space-y-1">
                         <span className="block w-8 h-0.5 bg-white"></span>
                         <span className="block w-8 h-0.5 bg-white"></span>
@@ -73,6 +78,10 @@ export default function Nav() {
                     <NavItem path={path} href="/about" text="About" closeSidebar={closeSidebar} />
                     <NavItem path={path} href="/services_" text="Services" closeSidebar={closeSidebar} />
                     <NavItem path={path} href="/contact" text="Contact" closeSidebar={closeSidebar} />
+                    <li className="lg:hidden text-white mt-2 text-xl">
+                        <Link href='/contact'>
+                            <button className="rounded-lg bg-red-500 px-4 py-2">Get Quote</button> {/* For larger screens */}
+                        </Link>                    </li>
                 </ul>
             </div>
         </div>

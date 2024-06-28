@@ -39,13 +39,6 @@ const MapBox = () => {
         const map = new Map({
             target: 'map',
             layers: [
-                new TileLayer({
-                    source: new StadiaMaps({
-                        layer: 'alidade_smooth_dark',
-                        retina: true,
-                        // apiKey: 'OPTIONAL' // Add your API key here if needed
-                    })
-                }),
                 vectorLayer
             ],
             view: new View({
