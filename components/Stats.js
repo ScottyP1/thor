@@ -2,24 +2,45 @@
 import { useState, useEffect } from "react";
 
 const weight = 30;
-const experience = 12;
+const experience = 15;
 
 export default function Stats() {
     const [tons, setTons] = useState(0);
     const [years, setYears] = useState(0);
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            if (tons < weight) {
-                setTons((prevTons) => prevTons + 1);
-            }
-            if (years < experience) {
-                setYears((prevYears) => prevYears + 1);
-            }
-        }, 100);
+        const hasVisited = localStorage.getItem('hasVisited');
 
-        // Cleanup the timeout
-        return () => clearTimeout(timer);
+        if (!hasVisited) {
+            const timer = setInterval(() => {
+                setTons((prevTons) => {
+                    if (prevTons < weight) {
+                        return prevTons + 1;
+                    } else {
+                        return prevTons;
+                    }
+                });
+
+                setYears((prevYears) => {
+                    if (prevYears < experience) {
+                        return prevYears + 1;
+                    } else {
+                        return prevYears;
+                    }
+                });
+
+                if (tons >= weight && years >= experience) {
+                    localStorage.setItem('hasVisited', 'true');
+                    clearInterval(timer);
+                }
+            }, 100);
+
+            // Cleanup the interval
+            return () => clearInterval(timer);
+        } else {
+            setTons(weight);
+            setYears(experience);
+        }
     }, [tons, years]);
 
     return (

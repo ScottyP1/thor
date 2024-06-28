@@ -6,7 +6,13 @@ const myFont = localFont({ src: '../fonts/Marker.ttf' });
 export default function Home() {
     return (
         <main className="absolute top-0 left-0 right-0 bg-black text-white text-center h-screen overflow-hidden">
-            <video className="absolute top-0 left-0 object-cover w-full h-full" controls={false} loop muted autoPlay playsInline>
+            <video className="absolute top-0 left-0 object-cover w-full h-full"
+                controls={false}
+                loop
+                muted
+                autoPlay
+                playsInline
+                poster='/homePoster.jpg'>
                 <source src="/videos/homeBG.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>

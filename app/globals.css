@@ -8,14 +8,17 @@ body {
   height: 100vh;
   background-color: red;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
 }
 
-.homeBG {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../public/videos/home.mp4');
-  background-size: contain;
+.contactBG {
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-position: top;
+  background-image: url('../public/contactBG.jpeg');
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -27,14 +30,27 @@ body {
 }
 
 @media (max-width:760px) {
-  .homeBG {
-    background-image: none;
-  }
-
   .textGradient {
     font-size: 32px;
     background: -webkit-linear-gradient(#ff0000 60%, #000000);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  .contactBG {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-position: top;
+    background-image: url('../public/contactBGMobile.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Hide the play button */
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+  -webkit-appearance: none;
 }

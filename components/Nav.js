@@ -35,7 +35,7 @@ export default function Nav() {
     return (
         <div className="sticky top-0 z-50">
             {/* Navbar */}
-            <div className="bg-black/[.7] text-white flex items-center justify-between px-4 h-[80px] xl:h-[100px]">
+            <div className="bg-black/[.3] text-white flex items-center justify-between px-4 h-[80px] xl:h-[100px]">
                 <div className="ml-6 flex items-center justify-center lg:justify-start w-full">
                     <Link href="/" rel="preload">
                         <div className="cursor-pointer p-2">

@@ -20,8 +20,8 @@ export default function About() {
                         </div>
                     </div>
                 </div>
-                <div className="grid flex-grow card bg-base-300 rounded-box place-items-center p-4">
-                    <p className="text-md">Welcome to Thor Transport! My name is Shawn Scott, and I am the proud owner and operator of Thor Transport.
+                <div className="grid flex-grow place-items-center p-4">
+                    <p className="text-md xl:text-xl">Welcome to Thor Transport! My name is Shawn Scott, and I am the proud owner and operator of Thor Transport.
                         With over 15 years of experience in the transportation industry, I have built a reputation for reliability,
                         precision, and excellence. At Thor Transport, we are dedicated to getting your cargo where it needs to be, whenever
                         it needs to be there. Over the years, I have driven for many top brands, gaining invaluable experience and insights
