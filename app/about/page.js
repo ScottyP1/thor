@@ -2,7 +2,7 @@ import Stats from "@/components/Stats";
 
 export default function About() {
     return (
-        <main className="min-h-full absolute top-0 left-0 right-0 text-white bg-black">
+        <>
             <div className="mt-24">
                 <h1 className="text-center text-2xl xl:text-4xl tracking-[15px]">ABOUT OUR COMPANY</h1>
             </div>
@@ -21,7 +21,7 @@ export default function About() {
                     </div>
                 </div>
                 <div className="grid flex-grow place-items-center p-4">
-                    <p className="text-md xl:text-xl">Welcome to Thor Transport! My name is Shawn Scott, and I am the proud owner and operator of Thor Transport.
+                    <p className="text-md xl:text-xl mb-6">Welcome to Thor Transport! My name is Shawn Scott, and I am the proud owner and operator of Thor Transport.
                         With over 15 years of experience in the transportation industry, I have built a reputation for reliability,
                         precision, and excellence. At Thor Transport, we are dedicated to getting your cargo where it needs to be, whenever
                         it needs to be there. Over the years, I have driven for many top brands, gaining invaluable experience and insights
@@ -32,6 +32,6 @@ export default function About() {
                         rest assured that your cargo is in good hands.</p>
                 </div>
             </div>
-        </main>
+        </>
     );
 }

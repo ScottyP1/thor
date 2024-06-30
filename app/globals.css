@@ -10,6 +10,18 @@ body {
   overflow-x: hidden;
 }
 
+.linearBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-size: contain;
+  background-image: linear-gradient(to bottom, #000000 15%, #ffffff);
+  z-index: -1;
+}
+
+
+
 .contactBG {
   height: 100vh;
   position: absolute;

@@ -6,11 +6,11 @@ import MapBox from "@/components/Map";
 
 export default function Contact() {
     return (
-        <main className="contactBG text-center text-white">
-            <div className="mt-24 xl:mt-32 mx-4 xl:mx-32 bg-black/[.6] rounded-lg p-4">
+        <>
+            <div className="mt-24 mx-4">
                 <h1 className="text-center text-2xl xl:text-4xl tracking-[15px]">CONTACT US</h1>
                 <p className="hidden md:text-md">Call, Email us or fill out the form and well get back to you.</p>
-                <div className="flex flex-wrap justify-center">
+                <div className="flex flex-wrap justify-center bg-black/[.6] rounded-lg p-4">
                     <div className="mt-6 mx-auto w-full xl:w-3/5">
                         <ContactForm />
                     </div>
@@ -28,6 +28,6 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
-        </main>
+        </>
     )
 }

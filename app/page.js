@@ -14,9 +14,10 @@ export default function Home() {
                 <source src="/videos/homeBG.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-            <div className=" absolute z-10 flex flex-col mt-24 xl:mt-32 h-full ml-5 xl:ml-4 text-center">
+            <div className=" absolute z-10 flex flex-col mt-32 xl:mt-32 h-full  xl:ml-4 text-center">
                 <h1 className="text-2xl xl:text-6xl tracking-[55px] text-center ml-8">THOR</h1>
-                <h2 className={`textGradient text-4xl xl:text-8xl tracking-[25px]`}>TRANSPORT</h2>
+                <h2 className={`textGradient text-4xl xl:text-8xl tracking-[25px] ms-1`}>TRANSPORT</h2>
+                <span className='text-lg tracking-[20px]'>ROAD FREIGHT</span>
             </div>
         </main>
     );
