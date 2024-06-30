@@ -12,7 +12,7 @@ export default function FactList() {
         <>
             {list.map((item) => {
                 return (
-                    <CardItem title={item.title} description={item.description} />
+                    <CardItem title={item.title} description={item.description} key={item.title} />
                 )
             })}
 
