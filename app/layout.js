@@ -11,8 +11,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
+        <div className="linearBackground"></div> {/* Add the gradient overlay */}
         <Nav />
-        <main className="min-h-full bg-black linearBackground text-center text-white">
+        <main className="min-h-full bg-transparent text-center">
           {children}
         </main>
         <Footer />

@@ -5,24 +5,26 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
   background-color: red;
   overflow-x: hidden;
+  color: white;
 }
 
 .linearBackground {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-size: contain;
-  background-image: linear-gradient(to bottom, #000000 15%, #ffffff);
+  height: 100%;
+  background: linear-gradient(to bottom, #000000 40%, #ffffff);
+  pointer-events: none;
+  /* Make sure it doesn't interfere with clicks */
   z-index: -1;
+  /* Ensure it stays behind other content */
 }
 
-
-
-.contactBG {
+/* .contactBG {
   height: 100vh;
   position: absolute;
   top: 0;
@@ -31,7 +33,7 @@ body {
   background-image: url('../public/contactBG.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
-}
+} */
 
 .notFoundBG {
   height: 100vh;

@@ -3,45 +3,32 @@ import { useState, useEffect } from "react";
 
 const weight = 30;
 const experience = 15;
+const intervalDelay = 100;
 
 export default function Stats() {
     const [tons, setTons] = useState(0);
     const [years, setYears] = useState(0);
 
     useEffect(() => {
-        const hasVisited = localStorage.getItem('hasVisited');
-
-        if (!hasVisited) {
-            const timer = setInterval(() => {
-                setTons((prevTons) => {
-                    if (prevTons < weight) {
-                        return prevTons + 1;
-                    } else {
-                        return prevTons;
-                    }
-                });
-
-                setYears((prevYears) => {
-                    if (prevYears < experience) {
-                        return prevYears + 1;
-                    } else {
-                        return prevYears;
-                    }
-                });
-
-                if (tons >= weight && years >= experience) {
-                    localStorage.setItem('hasVisited', 'true');
-                    clearInterval(timer);
+        const timer = setInterval(() => {
+            setTons((prevTons) => {
+                if (prevTons < weight) {
+                    return prevTons + 1;
+                } else {
+                    return prevTons;
                 }
-            }, 100);
+            });
+            setYears((prevYears) => {
+                if (prevYears < experience) {
+                    return prevYears + 1;
+                } else {
+                    return prevYears;
+                }
+            });
+        }, intervalDelay);
 
-            // Cleanup the interval
-            return () => clearInterval(timer);
-        } else {
-            setTons(weight);
-            setYears(experience);
-        }
-    }, [tons, years]);
+        return () => clearInterval(timer);
+    }, []);
 
     return (
         <div className="stats shadow flex space-x-8">
