@@ -22,15 +22,24 @@ export default function About() {
                     </div>
                 </div>
                 <div className="grid flex-grow place-items-center p-4">
-                    <p className="text-md xl:text-xl">Welcome to Thor Transport! My name is Shawn Scott, and I am the proud owner and operator of Thor Transport.
+                    <p className="text-md xl:text-xl">
+
+                        Welcome to Thor Transport! My name is Shawn Scott, and I am the proud owner and operator of Thor Transport.
                         With over 15 years of experience in the transportation industry, I have built a reputation for reliability,
                         precision, and excellence. At Thor Transport, we are dedicated to getting your cargo where it needs to be, whenever
-                        it needs to be there. Over the years, I have driven for many top brands, gaining invaluable experience and insights
+                        it needs to be there. Over the years, I have driven for many top brands, gaining valuable experience and insights
                         into the logistics and transportation industry. This extensive background has equipped me with the skills and
                         knowledge necessary to start my own company. For the past two years, as a private owner, I have successfully
                         managed and fulfilled numerous deliveries, consistently meeting and exceeding customer expectations.
                         At Thor Transport, we pride ourselves on maintaining a perfect track record. With zero errors or mishaps, you can
-                        rest assured that your cargo is in good hands.</p>
+                        rest assured that your cargo is in good hands.
+
+                        {/* 
+                        Thankyou for considering Thor Transport to ensure your cargo gets delivered with quality care in a timely mannor.
+                        Thor Transport is ran by Shawn Scott who has over 15 years of experience. You can trust that your delivery is in
+                        good hands and leave the rest to him. Contact to recieve a quote and get started with Thor Transport today. */}
+
+                    </p>
                 </div>
                 <AvatarItem />
             </div>
