@@ -11,7 +11,7 @@ export default function Contact() {
                 <div className=" mx-auto w-full xl:w-3/5 flex flex-col justify-between">
                     <div>
                         <div className="flex justify-center mb-4 text-red-500">
-                            <p className="mx-auto ">MC# 1374944</p>
+                            <p className="mx-auto">MC# 1374944</p>
                             <p className="mx-auto">DOT# 3810434</p>
                         </div>
                         <ContactForm />
