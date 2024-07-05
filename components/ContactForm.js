@@ -1,28 +1,25 @@
-'use client'
+'use client';
+
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import emailjs from 'emailjs-com';
-import pako from 'pako'; // Importing pako for compression
 
 export default function ContactForm() {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
     const [disabled, setDisabled] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
     const [alertInfo, setAlertInfo] = useState({ message: '', type: '' });
 
-    const onSubmit = async (data) => {
+    const onSubmit = async (data, e) => {
         setDisabled(true);
 
         try {
-            // Compress data (e.g., JSON payload)
-            const compressedData = pako.deflate(JSON.stringify(data));
-
             // Send form data with EmailJS using sendForm
             const response = await emailjs.sendForm(
                 'service_wi0sylb', // EmailJS service ID
                 'template_y60bcei', // EmailJS template ID
-                '#contactForm',    // Form selector
-                'bF5JqzvH_HP0iliq7', // User ID from EmailJS Dashboard
+                e.target, // Form element
+                'bF5JqzvH_HP0iliq7' // User ID from EmailJS Dashboard
             );
 
             console.log('EmailJS Response:', response);

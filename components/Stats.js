@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 const weight = 30;
-const experience = 15;
+const experience = 18;
 const intervalDelay = 100;
 
 export default function Stats() {

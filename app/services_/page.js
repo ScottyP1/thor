@@ -5,6 +5,7 @@ import TruckImg from '@/public/truckCard.png';
 import LightCargo from '@/public/lightCargo.jpg';
 import nightTruck from '@/public/nightTruck.jpg';
 import specialCargo from '@/public/specialcargo.jpg';
+import VolvoTruck from '@/public/Volvo.jpg';
 
 export default function Services() {
     return (
@@ -14,7 +15,7 @@ export default function Services() {
                 At Thor Transport, we specialize in providing reliable and efficient road freight services across the country. Whether you need to transport a single pallet or a full truckload, our experienced team is dedicated to ensuring your goods arrive safely and on time.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 p-3">
-                <CardItem img={TruckImg} title='Full Truckload (FTL)'
+                <CardItem img={VolvoTruck} title='Full Truckload (FTL)'
                     description='Ideal for large shipments, our FTL service guarantees that your cargo travels directly from 
                     point A to point B without transfers, minimizing handling and transit time.' />
                 <CardItem img={LightCargo} title='Less Than Truckload (LTL)'
@@ -24,8 +25,7 @@ export default function Services() {
                     description='For time-sensitive deliveries, our express shipping service provides expedited transport, 
                         ensuring your urgent shipments reach their destination as quickly as possible.' />
                 <CardItem img={specialCargo} title='Specialized Freight'
-                    description='We cater to unique transportation needs, including oversized loads, hazardous materials, 
-                        and temperature-controlled goods.' />
+                    description='We cater to unique transportation needs, including oversized loads, hazardous materials.' />
             </div>
             <div className="text-center m-3">
                 <h2 className="tracking-[5px] text-md">WHY CHOOSE US</h2>

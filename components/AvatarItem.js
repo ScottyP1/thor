@@ -6,25 +6,25 @@ import Image from "next/image";
 
 export default function AvatarItem() {
     return (
-        <div className="flex flex-col items-center m-3 mb-12 bg-black/[.8] rounded-lg md:flex-row md:items-start">
-            <div className="w-20 h-20 md:w-32 md:h-32 overflow-hidden rounded-full relative m-3">
+        <div className="flex items-center bg-black/[.8] me-0 md:me-3 rounded-lg p-2 mb-3 md:flex-row md:items-center space-x-4 shadow">
+            <div className="w-24 h-24 overflow-hidden rounded-lg relative">
                 <Image
                     src={profileImg}
                     alt="avatar"
-                    width={128}
-                    height={128}
-                    className='object-cover absolute top-[-20px] left-0 right-0'
+                    width={96}
+                    height={96}
+                    className="object-cover absolute top-0 left-0 w-full h-full"
                 />
             </div>
-            <div className="flex-1 my-auto">
-                <Typography className="tracking-[5px] text-md font-medium">Shawn Scott</Typography>
-                <Typography color="red" className="tracking-[5px] text-md font-medium">
-                    CEO - Founder
-                </Typography>
-            </div>
-            <div className="flex flex-col m-3 p-3 my-auto">
-                <Typography className="tracking-[5px] text-md font-medium">MC# 1374944</Typography>
-                <Typography className="tracking-[5px] text-md font-medium">DOT# 3810434</Typography>
+            <div className="flex flex-col md:flex-row justify-between w-full">
+                <div className="flex flex-col items-center md:items-start mb-2 md:mb-0">
+                    <Typography className="tracking-[5px] text-sm text-white mb-1">Shawn Scott</Typography>
+                    <Typography className="tracking-[3px] text-xs text-white">CEO - Founder</Typography>
+                </div>
+                <div className="flex flex-col items-center md:items-end">
+                    <Typography className="tracking-[5px] text-sm text-white mb-1">MC# 1374944</Typography>
+                    <Typography className="tracking-[5px] text-sm text-white">DOT# 3810434</Typography>
+                </div>
             </div>
         </div>
     );
