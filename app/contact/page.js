@@ -17,7 +17,7 @@ export default function Contact() {
                         <ContactForm />
                     </div>
                     <div className="mt-4 w-full flex flex-col mx-auto">
-                        <span className="text-sm md:text-md mb-3">Call, Email or fill out the form and we'll get with you shortly.</span>
+                        <span className="text-sm md:text-md mb-3">Call, Email or fill out the form and we&apos;ll get with you shortly.</span>
                         <div className="flex flex-col md:flex-row md:justify-between">
                             <a href="tel:3042832528" className="flex text-lg justify-center mb-2 md:mb-0">
                                 <MdOutlinePhoneIphone className="m-1" />
